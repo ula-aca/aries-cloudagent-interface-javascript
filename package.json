@@ -1,0 +1,94 @@
+{
+  "name": "@ula-aca/aries-cloudagent-interface",
+  "version": "0.0.0",
+  "description": "An Aries Cloudagent API Wrapper for JavaScript and NodeJS",
+  "main": "./lib/src/index.js",
+  "types": "./lib/src/index.d.ts",
+  "scripts": {
+    "test": "nyc mocha",
+    "coverage": "nyc report",
+    "prettier": "prettier --list-different '**/*.{md,json,yaml}'",
+    "prettier:fix": "yarn prettier --write",
+    "lint": "eslint --ext .js,.ts .",
+    "lint:fix": "yarn lint --fix",
+    "commitlint": "commitlint --to HEAD",
+    "clean": "rm -rf ./lib ./generated",
+    "compile": "tsc",
+    "build": "yarn generate-api-client && yarn compile",
+    "types": "yarn compile --noEmit",
+    "generate-api-client": "openapi-generator generate -i resources/aca-py-openapi-schema.json -g typescript-axios -o generated/openapi --additional-properties=supportsES6=true,modelPropertyNaming='original' && git apply patches/api.patch",
+    "get-openapi-spec": "swagger2openapi --outfile resources/aca-py-openapi-schema.json --patch",
+    "release": "cross-env HUSKY_BYPASS=true semantic-release",
+    "prepublishOnly": "yarn clean && yarn build"
+  },
+  "keywords": [
+    "aries",
+    "cloud-agent",
+    "did",
+    "identity",
+    "blockchain",
+    "indy"
+  ],
+  "files": [
+    "lib"
+  ],
+  "contributors": [
+    "Timo Glastra <timo@glastra.me>",
+    "Karim Stekelenburg <karim.stekelenburg@me.com>"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ula-aca/aries-cloudagent-interface-javascript"
+  },
+  "bugs": {
+    "url": "https://github.com/ula-aca/aries-cloudagent-interface-javascript/issues"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@istanbuljs/nyc-config-typescript": "^0.1.3",
+    "@openapitools/openapi-generator-cli": "^1.0.8-4.2.2",
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^7.1.0-beta.10",
+    "@types/chai": "^4.2.6",
+    "@types/chai-as-promised": "^7.1.2",
+    "@types/mocha": "^5.2.7",
+    "@types/sinon": "^7.5.1",
+    "@types/sinon-chai": "^3.2.3",
+    "@types/ws": "^6.0.4",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "commitizen": "^4.0.3",
+    "conventional-changelog-conventionalcommits": "^4.2.3",
+    "cross-env": "^6.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "prettier": "^1.19.1",
+    "semantic-release": "^16.0.0-beta.46",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0",
+    "source-map-support": "^0.5.16",
+    "swagger2openapi": "^5.3.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

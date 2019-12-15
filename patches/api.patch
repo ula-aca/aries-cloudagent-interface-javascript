@@ -1,0 +1,40 @@
+diff --git a/generated/openapi/api.ts b/generated/openapi/api.ts
+index 5097995..85a36a2 100644
+--- a/generated/openapi/api.ts
++++ b/generated/openapi/api.ts
+@@ -279,7 +279,7 @@ export interface CredAttrSpec {
+      * @type {string}
+      * @memberof CredAttrSpec
+      */
+-    mime_type?: string | null;
++    "mime-type"?: string | null;
+     /**
+      * Attribute value: base64-encode if MIME type is present
+      * @type {string}
+@@ -659,7 +659,7 @@ export interface CredentialPreview {
+      * @type {string}
+      * @memberof CredentialPreview
+      */
+-    type?: CredentialPreviewTypeEnum;
++    "@type"?: CredentialPreviewTypeEnum;
+     /**
+      * 
+      * @type {Array<CredAttrSpec>}
+@@ -1239,7 +1239,7 @@ export interface PresAttrSpec {
+      * @type {string}
+      * @memberof PresAttrSpec
+      */
+-    mime_type?: string;
++    "mime-type"?: string;
+     /**
+      * Attribute value
+      * @type {string}
+@@ -1387,7 +1387,7 @@ export interface PresentationPreview {
+      * @type {string}
+      * @memberof PresentationPreview
+      */
+-    type?: PresentationPreviewTypeEnum;
++    "@type"?: PresentationPreviewTypeEnum;
+     /**
+      * 
+      * @type {Array<PresAttrSpec>}

@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "pre-commit": "yarn types && lint-staged",
+    "prepare-commit-msg": "if [[ -z $HUSKY_BYPASS ]]; then exec < /dev/tty && git cz --hook; fi",
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  }
+}

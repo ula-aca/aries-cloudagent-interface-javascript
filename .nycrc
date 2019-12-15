@@ -1,0 +1,14 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "extension": [
+    ".ts",
+    ".js"
+  ],
+  "reporter": ["text", "lcovonly", "html"],
+  "include": "src/**",
+  "checkCoverage": true,
+  "lines": 100,
+  "statements": 100,
+  "functions": 100,
+  "branches": 100
+}

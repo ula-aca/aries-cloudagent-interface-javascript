@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "sourceMap": true,
+    "lib": ["es6", "dom", "dom.iterable"],
+    "baseUrl": ".",
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noLib": false
+  },
+  "include": ["src", "generated/openapi"]
+}
