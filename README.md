@@ -1,8 +1,8 @@
 # Aries Cloudagent Interface JavaScript
 
 [![Continuous Integration Badge](https://github.com/ula-aca/aries-cloudagent-interface-javascript/workflows/Continuous%20Integration/badge.svg)](https://github.com/ula-aca/aries-cloudagent-interface-javascript/actions?query=workflow%3A%22Continuous+Integration%22)
-[![Maintainability](https://api.codeclimate.com/v1/badges/07f0987be83ea6b06741/maintainability)](https://codeclimate.com/github/ula-aca/aries-cloudagent-interface-javascript/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/07f0987be83ea6b06741/test_coverage)](https://codeclimate.com/github/ula-aca/aries-cloudagent-interface-javascript/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/da7f49f8f29937645ba3/maintainability)](https://codeclimate.com/github/ula-aca/aries-cloudagent-interface-javascript/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/da7f49f8f29937645ba3/test_coverage)](https://codeclimate.com/github/ula-aca/aries-cloudagent-interface-javascript/test_coverage)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Installation
