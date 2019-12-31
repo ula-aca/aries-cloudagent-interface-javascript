@@ -1,11 +1,8 @@
-import { Configuration } from '../src'
+import * as ACAInterface from '../src'
+import * as ACAGenerated from '../generated/openapi/index'
 
-describe('aries-cloudagent-interface', () => {
-  it('should be able to create a Configuration instance', () => {
-    const configuration = new Configuration({
-      basePath: 'http://ula.test:7002'
-    })
-
-    configuration.should.be.instanceOf(Configuration)
+describe('@ula-aca/aries-cloudagent-interface', () => {
+  it('should export everything from the generated openapi directory', () => {
+    ACAInterface.should.deep.equal(ACAGenerated)
   })
 })

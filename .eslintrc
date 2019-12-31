@@ -28,5 +28,13 @@
         "extensions": [".js", ".ts"]
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/tests/**"],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
 }
