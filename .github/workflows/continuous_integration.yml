@@ -1,6 +1,6 @@
 name: Continuous Integration
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   style:
@@ -85,7 +85,7 @@ jobs:
     name: Release
     runs-on: ubuntu-18.04
     # Only release on master
-    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/beta'
+    if: github.ref == 'refs/heads/master'
     needs: [style, test]
     steps:
       - name: Checkout
