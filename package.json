@@ -76,7 +76,7 @@
     "nyc": "^14.1.1",
     "prettier": "^1.19.1",
     "semantic-release": "^16.0.0-beta.46",
-    "sinon": "^7.5.0",
+    "sinon": "^8.0.2",
     "sinon-chai": "^3.3.0",
     "source-map-support": "^0.5.16",
     "swagger2openapi": "^5.3.1",
