@@ -19,7 +19,8 @@
     "generate-api-client": "openapi-generator generate -i resources/aca-py-openapi-schema.json -g typescript-axios -o generated/openapi --additional-properties=supportsES6=true,modelPropertyNaming='original' && git apply patches/api.patch",
     "get-openapi-spec": "swagger2openapi --outfile resources/aca-py-openapi-schema.json --patch",
     "release": "cross-env HUSKY_BYPASS=true semantic-release",
-    "prepublishOnly": "yarn clean && yarn build"
+    "prepublishOnly": "yarn clean && yarn build",
+    "update-headers": "copyright-header --fix --copyrightHolder 'ula-aca' --templateId 'apache' --forceModificationYear 'present' --include '(src|tests)'"
   },
   "keywords": [
     "aries",
@@ -63,6 +64,7 @@
     "chai-as-promised": "^7.1.1",
     "commitizen": "^4.0.3",
     "conventional-changelog-conventionalcommits": "^4.2.3",
+    "copyright-header": "^0.4.6",
     "cross-env": "^6.0.3",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.1.0",
