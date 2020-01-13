@@ -1,5 +1,5 @@
 diff --git a/generated/openapi/api.ts b/generated/openapi/api.ts
-index 5097995..85a36a2 100644
+index 55f855a..98836fc 100644
 --- a/generated/openapi/api.ts
 +++ b/generated/openapi/api.ts
 @@ -279,7 +279,7 @@ export interface CredAttrSpec {
@@ -38,3 +38,82 @@ index 5097995..85a36a2 100644
      /**
       * 
       * @type {Array<PresAttrSpec>}
+@@ -1553,7 +1553,7 @@ export interface Schema {
+      * @type {Array<string>}
+      * @memberof Schema
+      */
+-    attr_names?: Array<string>;
++    attrNames?: Array<string>;
+     /**
+      * Schema name
+      * @type {string}
+@@ -6073,7 +6073,7 @@ export const LedgerApiFp = function(configuration?: Configuration) {
+          * @param {*} [options] Override http request option.
+          * @throws {RequiredError}
+          */
+-        ledgerDidEndpointGet(did: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
++        ledgerDidEndpointGet(did: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<LedgerEndpointGetResults> {
+             const localVarAxiosArgs = LedgerApiAxiosParamCreator(configuration).ledgerDidEndpointGet(did, options);
+             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+@@ -6087,7 +6087,7 @@ export const LedgerApiFp = function(configuration?: Configuration) {
+          * @param {*} [options] Override http request option.
+          * @throws {RequiredError}
+          */
+-        ledgerDidVerkeyGet(did: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
++        ledgerDidVerkeyGet(did: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<LedgerVerkeyGetResults> {
+             const localVarAxiosArgs = LedgerApiAxiosParamCreator(configuration).ledgerDidVerkeyGet(did, options);
+             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+@@ -6104,7 +6104,7 @@ export const LedgerApiFp = function(configuration?: Configuration) {
+          * @param {*} [options] Override http request option.
+          * @throws {RequiredError}
+          */
+-        ledgerRegisterNymPost(did: string, verkey: string, alias?: string, role?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
++        ledgerRegisterNymPost(did: string, verkey: string, alias?: string, role?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RegisterNymPostResults> {
+             const localVarAxiosArgs = LedgerApiAxiosParamCreator(configuration).ledgerRegisterNymPost(did, verkey, alias, role, options);
+             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+@@ -9034,4 +9034,41 @@ export class WalletApi extends BaseAPI {
+ 
+ }
+ 
++/**
++ * 
++ * @export
++ * @interface LedgerVerkeyGetResults
++ */
++export interface LedgerVerkeyGetResults {
++    /**
++     * 
++     * @memberof LedgerVerkeyGetResults
++     */
++    verkey: string | null
++}
++
++/**
++ * 
++ * @export
++ * @interface LedgerEndpointGetResults
++ */
++export interface LedgerEndpointGetResults {
++    /**
++     * 
++     * @memberof LedgerEndpointGetResults
++     */
++    endpoint: string
++}
+ 
++/**
++ * 
++ * @export
++ * @interface RegisterNymPostResults
++ */
++export interface RegisterNymPostResults {
++    /**
++     * 
++     * @memberof RegisterNymPostResults
++     */
++    success: boolean
++}
+\ No newline at end of file
