@@ -46,7 +46,7 @@
     "url": "https://github.com/ula-aca/aries-cloudagent-interface-javascript/issues"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
+    "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.2.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.0",
     "@openapitools/openapi-generator-cli": "^1.0.8-4.2.2",
