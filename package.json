@@ -22,6 +22,9 @@
     "prepublishOnly": "yarn clean && yarn build",
     "update-headers": "copyright-header --fix --copyrightHolder 'ula-aca' --templateId 'apache' --forceModificationYear 'present' --include '(src|tests)'"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "aries",
     "cloud-agent",
