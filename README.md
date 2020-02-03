@@ -24,6 +24,8 @@ yarn add @ula-aca/aries-cloudagent-interface
 
 ## Usage
 
+> The API is generated using the OpenAPI Schema (Swagger) from Aries Cloud Agent Python. However this schema is not representing the real API. A lot of types are not correct. Keep this in mind when using this package. Please open issues or pull requests with patches when you find them.
+
 The interface is generated, so to know for sure what is being exported import the package and see what's exposed. It matches the OpenApi schema which is viewable in the [Swagger UI](#swagger-ui).
 
 ```typescript
