@@ -12,14 +12,14 @@
 
 ## Installation
 
-In an existing project (with `package.json`), install `aries-cloudagent-interface`
+In an existing project (with `package.json`), install `@ula-aca/aries-cloudagent-interface`
 
 ```bash
 # NPM
-npm install --save aries-cloudagent-interface
+npm install --save @ula-aca/aries-cloudagent-interface
 
 # Yarn
-yarn add aries-cloudagent-interface
+yarn add @ula-aca/aries-cloudagent-interface
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ import {
   ConnectionsApi,
   CredentialDefinitionApi,
   ...
-} from 'aries-cloudagent-interface'
+} from '@ula-aca/aries-cloudagent-interface'
 ```
 
 ## Generating Open API Client
