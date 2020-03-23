@@ -85,7 +85,7 @@
     "sinon-chai": "^3.5.0",
     "source-map-support": "^0.5.16",
     "swagger2openapi": "^5.3.3",
-    "ts-node": "^8.6.2",
+    "ts-node": "^8.8.1",
     "typescript": "^3.8.2"
   },
   "dependencies": {
