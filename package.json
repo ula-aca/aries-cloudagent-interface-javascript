@@ -78,7 +78,7 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.1.6",
     "mocha": "^7.0.1",
-    "nyc": "^15.0.0",
+    "nyc": "^15.0.1",
     "prettier": "^1.19.1",
     "semantic-release": "^17.0.4",
     "sinon": "^8.1.1",
