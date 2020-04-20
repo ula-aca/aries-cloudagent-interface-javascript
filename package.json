@@ -79,7 +79,7 @@
     "lint-staged": "^10.1.6",
     "mocha": "^7.1.1",
     "nyc": "^15.0.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.4",
     "semantic-release": "^17.0.4",
     "sinon": "^9.0.2",
     "sinon-chai": "^3.5.0",
