@@ -4,7 +4,11 @@ update_configs:
     directory: '/'
     update_schedule: 'weekly'
     target_branch: 'development'
-    version_requirement_updates: 'increase_versions'
+    version_requirement_updates: 'increase_versions_if_necessary'
     commit_message:
       prefix: 'chore'
       include_scope: true
+    automerged_updates:
+      - match:
+          dependency_type: 'all'
+          update_type: 'in_range'
