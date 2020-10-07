@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/ula-aca/aries-cloudagent-interface-javascript/compare/v1.0.1...v2.0.0) (2020-10-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **update-schema:** New ACA-Py version introduced breaking changes in API
+
+### Miscellaneous Chores
+
+* **update-schema:** update aca-py schema to version 0.5.4 ([3dc622a](https://github.com/ula-aca/aries-cloudagent-interface-javascript/commit/3dc622ae716bb1fc7cda73dc7575ef49bcf0547f))
+
 ### [1.0.1](https://github.com/ula-aca/aries-cloudagent-interface-javascript/compare/v1.0.0...v1.0.1) (2020-01-13)
 
 ### Bug Fixes
