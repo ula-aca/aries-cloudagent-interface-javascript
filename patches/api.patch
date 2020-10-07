@@ -1,8 +1,17 @@
 diff --git a/generated/openapi/api.ts b/generated/openapi/api.ts
-index 55f855a..98836fc 100644
+index 21f6a6f..ec1ff9e 100644
 --- a/generated/openapi/api.ts
 +++ b/generated/openapi/api.ts
-@@ -279,7 +279,7 @@ export interface CredAttrSpec {
+@@ -100,7 +100,7 @@ export interface AttachDecorator {
+      * @type {string}
+      * @memberof AttachDecorator
+      */
+-    mime_type?: string;
++    "mime-type"?: string;
+     /**
+      * File name
+      * @type {string}
+@@ -583,7 +583,7 @@ export interface CredAttrSpec {
       * @type {string}
       * @memberof CredAttrSpec
       */
@@ -11,16 +20,16 @@ index 55f855a..98836fc 100644
      /**
       * Attribute value: base64-encode if MIME type is present
       * @type {string}
-@@ -659,7 +659,7 @@ export interface CredentialPreview {
+@@ -770,7 +770,7 @@ export interface CredentialPreview {
       * @type {string}
       * @memberof CredentialPreview
       */
--    type?: CredentialPreviewTypeEnum;
-+    "@type"?: CredentialPreviewTypeEnum;
+-    type?: string;
++    "@type"?: string;
      /**
       * 
       * @type {Array<CredAttrSpec>}
-@@ -1239,7 +1239,7 @@ export interface PresAttrSpec {
+@@ -1441,7 +1441,7 @@ export interface PresAttrSpec {
       * @type {string}
       * @memberof PresAttrSpec
       */
@@ -29,53 +38,90 @@ index 55f855a..98836fc 100644
      /**
       * Attribute value
       * @type {string}
-@@ -1387,7 +1387,7 @@ export interface PresentationPreview {
+@@ -1509,7 +1509,7 @@ export interface PresentationPreview {
       * @type {string}
       * @memberof PresentationPreview
       */
--    type?: PresentationPreviewTypeEnum;
-+    "@type"?: PresentationPreviewTypeEnum;
+-    type?: string;
++    "@type"?: string;
      /**
       * 
       * @type {Array<PresAttrSpec>}
-@@ -1553,7 +1553,7 @@ export interface Schema {
-      * @type {Array<string>}
-      * @memberof Schema
-      */
--    attr_names?: Array<string>;
-+    attrNames?: Array<string>;
-     /**
-      * Schema name
-      * @type {string}
-@@ -6073,7 +6073,7 @@ export const LedgerApiFp = function(configuration?: Configuration) {
+@@ -6598,7 +6598,7 @@ export const LedgerApiFp = function(configuration?: Configuration) {
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
--        ledgerDidEndpointGet(did: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-+        ledgerDidEndpointGet(did: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<LedgerEndpointGetResults> {
-             const localVarAxiosArgs = LedgerApiAxiosParamCreator(configuration).ledgerDidEndpointGet(did, options);
+-        async ledgerDidEndpointGet(did: string, endpointType?: 'Endpoint' | 'Profile' | 'LinkedDomains', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
++        async ledgerDidEndpointGet(did: string, endpointType?: 'Endpoint' | 'Profile' | 'LinkedDomains', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LedgerEndpointGetResults>> {
+             const localVarAxiosArgs = await LedgerApiAxiosParamCreator(configuration).ledgerDidEndpointGet(did, endpointType, options);
              return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                  const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-@@ -6087,7 +6087,7 @@ export const LedgerApiFp = function(configuration?: Configuration) {
+@@ -6612,7 +6612,7 @@ export const LedgerApiFp = function(configuration?: Configuration) {
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
--        ledgerDidVerkeyGet(did: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-+        ledgerDidVerkeyGet(did: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<LedgerVerkeyGetResults> {
-             const localVarAxiosArgs = LedgerApiAxiosParamCreator(configuration).ledgerDidVerkeyGet(did, options);
+-        async ledgerDidVerkeyGet(did: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
++        async ledgerDidVerkeyGet(did: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LedgerVerkeyGetResults>> {
+             const localVarAxiosArgs = await LedgerApiAxiosParamCreator(configuration).ledgerDidVerkeyGet(did, options);
              return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                  const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-@@ -6104,7 +6104,7 @@ export const LedgerApiFp = function(configuration?: Configuration) {
+@@ -6643,7 +6643,7 @@ export const LedgerApiFp = function(configuration?: Configuration) {
           * @param {*} [options] Override http request option.
           * @throws {RequiredError}
           */
--        ledgerRegisterNymPost(did: string, verkey: string, alias?: string, role?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-+        ledgerRegisterNymPost(did: string, verkey: string, alias?: string, role?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<RegisterNymPostResults> {
-             const localVarAxiosArgs = LedgerApiAxiosParamCreator(configuration).ledgerRegisterNymPost(did, verkey, alias, role, options);
+-        async ledgerRegisterNymPost(did: string, verkey: string, alias?: string, role?: 'STEWARD' | 'TRUSTEE' | 'ENDORSER' | 'NETWORK_MONITOR' | 'reset', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
++        async ledgerRegisterNymPost(did: string, verkey: string, alias?: string, role?: 'STEWARD' | 'TRUSTEE' | 'ENDORSER' | 'NETWORK_MONITOR' | 'reset', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RegisterNymPostResults>> {
+             const localVarAxiosArgs = await LedgerApiAxiosParamCreator(configuration).ledgerRegisterNymPost(did, verkey, alias, role, options);
              return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                  const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-@@ -9034,4 +9034,41 @@ export class WalletApi extends BaseAPI {
+@@ -6707,7 +6707,7 @@ export const LedgerApiFactory = function (configuration?: Configuration, basePat
+          * @param {*} [options] Override http request option.
+          * @throws {RequiredError}
+          */
+-        ledgerDidEndpointGet(did: string, endpointType?: 'Endpoint' | 'Profile' | 'LinkedDomains', options?: any): AxiosPromise<void> {
++        ledgerDidEndpointGet(did: string, endpointType?: 'Endpoint' | 'Profile' | 'LinkedDomains', options?: any): AxiosPromise<LedgerEndpointGetResults> {
+             return LedgerApiFp(configuration).ledgerDidEndpointGet(did, endpointType, options).then((request) => request(axios, basePath));
+         },
+         /**
+@@ -6717,7 +6717,7 @@ export const LedgerApiFactory = function (configuration?: Configuration, basePat
+          * @param {*} [options] Override http request option.
+          * @throws {RequiredError}
+          */
+-        ledgerDidVerkeyGet(did: string, options?: any): AxiosPromise<void> {
++        ledgerDidVerkeyGet(did: string, options?: any): AxiosPromise<LedgerVerkeyGetResults> {
+             return LedgerApiFp(configuration).ledgerDidVerkeyGet(did, options).then((request) => request(axios, basePath));
+         },
+         /**
+@@ -6740,7 +6740,7 @@ export const LedgerApiFactory = function (configuration?: Configuration, basePat
+          * @param {*} [options] Override http request option.
+          * @throws {RequiredError}
+          */
+-        ledgerRegisterNymPost(did: string, verkey: string, alias?: string, role?: 'STEWARD' | 'TRUSTEE' | 'ENDORSER' | 'NETWORK_MONITOR' | 'reset', options?: any): AxiosPromise<void> {
++        ledgerRegisterNymPost(did: string, verkey: string, alias?: string, role?: 'STEWARD' | 'TRUSTEE' | 'ENDORSER' | 'NETWORK_MONITOR' | 'reset', options?: any): AxiosPromise<RegisterNymPostResults> {
+             return LedgerApiFp(configuration).ledgerRegisterNymPost(did, verkey, alias, role, options).then((request) => request(axios, basePath));
+         },
+         /**
+@@ -8862,14 +8862,14 @@ export const ServerApiAxiosParamCreator = function (configuration?: Configuratio
  
+ 
+     
+-            const query = new URLSearchParams(localVarUrlObj.search);
++            const search = new URLSearchParams(localVarUrlObj.search);
+             for (const key in localVarQueryParameter) {
+-                query.set(key, localVarQueryParameter[key]);
++                search.set(key, localVarQueryParameter[key]);
+             }
+             for (const key in options.query) {
+-                query.set(key, options.query[key]);
++                search.set(key, options.query[key]);
+             }
+-            localVarUrlObj.search = (new URLSearchParams(query)).toString();
++            localVarUrlObj.search = (new URLSearchParams(search)).toString();
+             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+ 
+@@ -10066,4 +10066,41 @@ export class WalletApi extends BaseAPI {
+     }
  }
  
 +/**
@@ -90,7 +136,7 @@ index 55f855a..98836fc 100644
 +     */
 +    verkey: string | null
 +}
-+
+ 
 +/**
 + * 
 + * @export
@@ -103,7 +149,7 @@ index 55f855a..98836fc 100644
 +     */
 +    endpoint: string
 +}
- 
++
 +/**
 + * 
 + * @export
@@ -116,4 +162,3 @@ index 55f855a..98836fc 100644
 +     */
 +    success: boolean
 +}
-\ No newline at end of file
