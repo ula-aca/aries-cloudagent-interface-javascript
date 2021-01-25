@@ -1599,6 +1599,15 @@ cliui@^6.0.0:
     strip-ansi "^6.0.0"
     wrap-ansi "^6.2.0"
 
+cliui@^7.0.2:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/cliui/-/cliui-7.0.4.tgz#a0265ee655476fc807aea9df3df8df7783808b4f"
+  integrity sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==
+  dependencies:
+    string-width "^4.2.0"
+    strip-ansi "^6.0.0"
+    wrap-ansi "^7.0.0"
+
 clone@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
@@ -2452,6 +2461,11 @@ es6-promisify@^5.0.0:
   dependencies:
     es6-promise "^4.0.3"
 
+escalade@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
+  integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
+
 escape-string-regexp@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
@@ -3117,7 +3131,7 @@ get-caller-file@^1.0.1:
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
   integrity sha512-3t6rVToeoZfYSGd8YoLFR2DJkiQrIiUrGcjvFX2mDw3bn6k2OtwHN0TNCLbBO+w8qTvimhDkv+LSscbJY1vE6w==
 
-get-caller-file@^2.0.1:
+get-caller-file@^2.0.1, get-caller-file@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
@@ -5074,7 +5088,7 @@ node-fetch-npm@^2.0.2:
     json-parse-better-errors "^1.0.0"
     safe-buffer "^5.1.1"
 
-node-fetch@^2.3.0:
+node-fetch@^2.3.0, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
@@ -5434,42 +5448,42 @@ oas-kit-common@^1.0.8:
   dependencies:
     fast-safe-stringify "^2.0.7"
 
-oas-linter@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/oas-linter/-/oas-linter-3.2.0.tgz#82d2e586da00adc24c44e44de4b31a6f6ba5cc7e"
-  integrity sha512-LP5F1dhjULEJV5oGRg6ROztH2FddzttrrUEwq5J2GB2Zy938mg0vwt1+Rthn/qqDHtj4Qgq21duNGHh+Ew1wUg==
+oas-linter@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/oas-linter/-/oas-linter-3.2.1.tgz#1a6d9117d146805b58e56df479861de0293b6e5b"
+  integrity sha512-e5G6bbq3Nrfxm+SDPR5AiZ6n2smVUmhLA1OgI2/Bl8e2ywfWsKw/yuqrwiXXiNHb1wdM/GyPMX6QjCGJODlaaA==
   dependencies:
     "@exodus/schemasafe" "^1.0.0-rc.2"
     should "^13.2.1"
     yaml "^1.10.0"
 
-oas-resolver@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/oas-resolver/-/oas-resolver-2.5.1.tgz#d129b4f62bd21021184d765747b72d559e864c62"
-  integrity sha512-MdMY8YAnCdFTAt5+CTC/aYEOSIFt+ICOWxQvKKxsIHjc0/0tG6V4DzbkHW9SWWqUmDPiHDxJsi79kjsE/1PJ5g==
+oas-resolver@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/oas-resolver/-/oas-resolver-2.5.4.tgz#81fa1aaa7e2387ab2dba1045827e9d7b79822326"
+  integrity sha512-1vIj5Wkjmi+kZj5sFamt95LkuXoalmoKUohtaUQoCQZjLfPFaY8uZ7nw6IZaWuE6eLON2b6xrXhxD4hiTdYl0g==
   dependencies:
     node-fetch-h2 "^2.3.0"
     oas-kit-common "^1.0.8"
-    reftools "^1.1.6"
+    reftools "^1.1.8"
     yaml "^1.10.0"
-    yargs "^15.3.1"
+    yargs "^16.1.1"
 
 oas-schema-walker@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/oas-schema-walker/-/oas-schema-walker-1.1.5.tgz#74c3cd47b70ff8e0b19adada14455b5d3ac38a22"
   integrity sha512-2yucenq1a9YPmeNExoUa9Qwrt9RFkjqaMAA1X+U7sbb0AqBeTIdMHky9SQQ6iN94bO5NW0W4TRYXerG+BdAvAQ==
 
-oas-validator@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/oas-validator/-/oas-validator-5.0.2.tgz#6c7d405fa0b1b144414c6319140e987d6d7dc683"
-  integrity sha512-KVyNNWtZut1sZVBy4mBt1Iq6vQt0km+vJvaPanx4xV33ylpWpuQnMsb9UNQ6MuZVmOzBLl9SbNyvlNjzicty9Q==
+oas-validator@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/oas-validator/-/oas-validator-5.0.5.tgz#f42d5a9f0422a46caafa4f007007fdb7c6872aca"
+  integrity sha512-d10yy6xlhRTh6np44k2U0gm5M66pioYTllH8J1ZTj+WSY3cpTvU+Dt51iWOT85HJqyGHo0RZKXF3u/NGQWDFgg==
   dependencies:
     call-me-maybe "^1.0.1"
     oas-kit-common "^1.0.8"
-    oas-linter "^3.2.0"
-    oas-resolver "^2.5.1"
+    oas-linter "^3.2.1"
+    oas-resolver "^2.5.4"
     oas-schema-walker "^1.1.5"
-    reftools "^1.1.6"
+    reftools "^1.1.8"
     should "^13.2.1"
     yaml "^1.10.0"
 
@@ -6358,10 +6372,10 @@ reduce-flatten@^2.0.0:
   resolved "https://registry.yarnpkg.com/reduce-flatten/-/reduce-flatten-2.0.0.tgz#734fd84e65f375d7ca4465c69798c25c9d10ae27"
   integrity sha512-EJ4UNY/U1t2P/2k6oqotuX2Cc3T6nxJwsM0N0asT7dhrtH1ltUxDn4NalSYmPE2rCkVpcf/X6R0wDwcFpzhd4w==
 
-reftools@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/reftools/-/reftools-1.1.6.tgz#841b1ac241259632d63167bf708eccfbfbbba5b5"
-  integrity sha512-rQfJ025lvPjw9qyQuNPqE+cRs5qVs7BMrZwgRJnmuMcX/8r/eJE8f5/RCunJWViXKHmN5K2DFafYzglLOHE/tw==
+reftools@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/reftools/-/reftools-1.1.8.tgz#cc08fd67eb913d779fd330657d010cc080c7d643"
+  integrity sha512-Yvz9NH8uFHzD/AXX82Li1GdAP6FzDBxEZw+njerNBBQv/XHihqsWAjNfXtaq4QD2l4TEZVnp4UbktdYSegAM3g==
 
 regenerator-runtime@^0.11.0:
   version "0.11.1"
@@ -7302,20 +7316,21 @@ supports-hyperlinks@^2.0.0:
     supports-color "^7.0.0"
 
 swagger2openapi@^7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/swagger2openapi/-/swagger2openapi-7.0.2.tgz#598079039f025dd4a92f7128368e8b0ab65fad6a"
-  integrity sha512-EG9h+hq+mX4S6mh0IHf/K4Bd8cLFVvRFxt6YiuoQCKycbCoa8Cjr8hbzy1oDNpGYwjT29js/PrHffgJDuDlgQw==
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/swagger2openapi/-/swagger2openapi-7.0.5.tgz#9f622d8bc3a281aad850386994c0dc35d18654a8"
+  integrity sha512-Hzxse+VTX0u8xBgYJ665EjO6BfvW2PN9Yv+yIjBDm6ga9jl83+4CEdCCpznH+ILr5MS8bIIXB+XcQUM3u25w4g==
   dependencies:
     call-me-maybe "^1.0.1"
+    node-fetch "^2.6.1"
     node-fetch-h2 "^2.3.0"
     node-readfiles "^0.2.0"
     oas-kit-common "^1.0.8"
-    oas-resolver "^2.5.1"
+    oas-resolver "^2.5.4"
     oas-schema-walker "^1.1.5"
-    oas-validator "^5.0.2"
-    reftools "^1.1.6"
+    oas-validator "^5.0.5"
+    reftools "^1.1.8"
     yaml "^1.10.0"
-    yargs "^15.3.1"
+    yargs "^16.1.1"
 
 table-layout@^1.0.0:
   version "1.0.1"
@@ -7887,6 +7902,15 @@ wrap-ansi@^6.2.0:
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
 
+wrap-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
+  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
@@ -7938,6 +7962,11 @@ y18n@^4.0.0:
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
   integrity sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
 
+y18n@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-5.0.5.tgz#8769ec08d03b1ea2df2500acef561743bbb9ab18"
+  integrity sha512-hsRUr4FFrvhhRH12wOdfs38Gy7k2FFzB9qgN9v3aLykRq0dRcdcpz5C9FxdS2NuhOrI/628b/KSTJ3rwHysYSg==
+
 yallist@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
@@ -7983,6 +8012,11 @@ yargs-parser@^18.1.2:
   dependencies:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
+
+yargs-parser@^20.2.2:
+  version "20.2.4"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.4.tgz#b42890f14566796f85ae8e3a25290d205f154a54"
+  integrity sha512-WOkpgNhPTlE73h4VFAFsOnomJVaovO8VqLDzy5saChRBFQFBoMYirowyW+Q9HB4HFF4Z7VZTiG3iSzJJA29yRA==
 
 yargs-parser@^7.0.0:
   version "7.0.0"
@@ -8060,7 +8094,7 @@ yargs@^14.2.3:
     y18n "^4.0.0"
     yargs-parser "^15.0.1"
 
-yargs@^15.0.1, yargs@^15.0.2, yargs@^15.1.0, yargs@^15.3.1:
+yargs@^15.0.1, yargs@^15.0.2, yargs@^15.1.0:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-15.4.1.tgz#0d87a16de01aee9d8bec2bfbf74f67851730f4f8"
   integrity sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==
@@ -8076,6 +8110,19 @@ yargs@^15.0.1, yargs@^15.0.2, yargs@^15.1.0, yargs@^15.3.1:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
+
+yargs@^16.1.1:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
+  integrity sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==
+  dependencies:
+    cliui "^7.0.2"
+    escalade "^3.1.1"
+    get-caller-file "^2.0.5"
+    require-directory "^2.1.1"
+    string-width "^4.2.0"
+    y18n "^5.0.5"
+    yargs-parser "^20.2.2"
 
 yargs@^8.0.2:
   version "8.0.2"
